@@ -1,4 +1,4 @@
-# TSLint Config Silind
+# Text Resource Manager
 ![NPM Version](https://img.shields.io/npm/v/text-resource-manager.svg)
 [![Github License](https://img.shields.io/github/license/Silind/text-resource-manager.svg)](https://github.com/Silind/Hue-Debugger-UI/blob/master/LICENSE)
 [![Build Status](https://travis-ci.com/Silind/text-resource-manager.svg?branch=master)](https://travis-ci.com/Silind/Hue-Debugger-UI)
@@ -32,4 +32,4 @@ This project is licensed under the [MIT License](https://github.com/Silind/text-
 
 ## Get Help
 - Contact me on silindsoftwaredk@gmail.com
-- If appropriate, [open an issue](https://github.com/Silind/tslint-config-silind/issues) on GitHub
+- If appropriate, [open an issue](https://github.com/Silind/text-resource-manager/issues) on GitHub
