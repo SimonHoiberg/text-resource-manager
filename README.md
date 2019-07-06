@@ -9,14 +9,101 @@
 ## Table of content
 
 - [How it works](#how-it-works)
-- [Getting Started](#getting-started)
+- [**Getting Started**](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
 - [Get Help](#get-help)
+- [Acknowledgments](#acknowledgments)
 
 ## How it works
+With **Text Resource Manager** you can benefit from having all texts in your application localized in one single json file.  
+Easy to maintain, and easy to swap at runtime for multiple language support.
+
+When used with TypeScript, you get suggestions and hints on-the-fly, so finding the correct text will feel smooth and strainless.
+
+### Preview
+![example](https://silind-s3.s3.eu-west-2.amazonaws.com/icons-and-misc/trm1.gif)
+
+The structure of the json file can be however you want it. Flat, deeply nested or somewhere in between.   
+The only constraint is that the **json file must contain only values of _string_ and _object_**
+
+#### Example
+A json file containing texts could look like this:
+```json
+{
+ "buttons": {
+   "done": "Done, go to next",
+   "exit": "Go back"
+ },
+ "landingPage": {
+   "header": "Text Resource Manager",
+   "subHeader": "Sleek little text manager",
+   "welcomeMsg": "Hello, $1",
+   "menu": {
+     "home": "Home",
+     "users": "All Users",
+     "logout": "Log out",
+     "subMenu": {
+       "saveAndLogout": "Save and Log Out",
+       "logoutAndQuit": "Log Out without saving"
+     }
+   }
+ },
+ "copyright": "All rights reserved"
+}
+```
 
 ## Getting Started
+### Install
+Install **Text Resource Manager** using npm or yarn 
+
+**npm**:
+```console
+npm install text-resource-manager
+```
+**yarn**:
+```console
+yarn add text-resource-manager
+```
+
+### Use in project
+Import in your project, and pass in a reference to your json file
+```js
+import TextResourceManager from 'text-resource-manager';
+import strings from './strings.json';
+
+const { text } = new TextResourceManager(strings);
+
+/* Get your strings by using dot notation */
+const headerText = text.buttons.done; // Done, go to next
+```
+
+### Setup linter
+To use suggestions and hints, you need to watch the json file for changes
+
+In your package.json, create two new `scripts`
+```json
+...
+"scripts": {
+   "text-lint": "node node_modules/text-resource-manager/dist/ -file <json-file-path>",
+   "text-lint:watch": "node node_modules/text-resource-manager/dist/ -file <json-file-path> -watch"
+ },
+...
+```
+You can then use this script in extension with `npm start`  
+
+A full example of the scripts in a React App could look like this
+#### Example
+```json
+"scripts": {
+   "start": "react-scripts start & npm run text-lint:watch",
+   "build": "react-scripts build",
+   "test": "react-scripts test",
+   "eject": "react-scripts eject",
+   "text-lint": "node node_modules/text-resource-manager/dist/ -file src/strings.json",
+   "text-lint:watch": "node node_modules/text-resource-manager/dist/ -file src/strings.json -watch"
+ },
+```
 
 ## Contributing
 
@@ -33,3 +120,7 @@ This project is licensed under the [MIT License](https://github.com/Silind/text-
 ## Get Help
 - Contact me on silindsoftwaredk@gmail.com
 - If appropriate, [open an issue](https://github.com/Silind/text-resource-manager/issues) on GitHub
+
+## Acknowledgments
+- [json-schema-to-typescript](https://www.npmjs.com/package/json-schema-to-typescript) - Very useful tool for creating TypeScript interfaces from json schemas :thumbsup:
+
