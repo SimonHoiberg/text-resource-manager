@@ -1,0 +1,49 @@
+{
+  "name": "text-resource-manager",
+  "version": "1.0.0",
+  "description": "Lightweight text manager for managing texts from a localized json file",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silind/text-resource-manager.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "resource",
+    "manager"
+  ],
+  "author": "Silind Software",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Silind/text-resource-manager/issues"
+  },
+  "homepage": "https://github.com/Silind/text-resource-manager#readme",
+  "dependencies": {
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "json-schema-to-typescript": "^6.1.3",
+    "ts-jest": "^24.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.12",
+    "typescript": "^3.5.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/**/*.test.(ts|tsx)"
+    ],
+    "collectCoverage": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "done": "Done, go to next",
+    "exit": "Go back"
+  },
+  "landingPage": {
+    "header": "Text Resource Manager",
+    "subHeader": "Sleek little text manager",
+    "welcomeMsg": "Hello, $1",
+    "menu": {
+      "home": "Home",
+      "users": "All Users",
+      "logout": "Log out",
+      "subMenu": {
+        "saveAndLogout": "Save and Log Out",
+        "logoutAndQuit": "Log Out without saving"
+      }
+    }
+  },
+  "copyright": "All rights reserved"
+}
