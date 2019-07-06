@@ -4,7 +4,7 @@ export function interfaceNameConverter(name: string) {
   return name.charAt(0).toUpperCase() + name.slice(1);
 };
 
-export function parseJsonObject(object: object, title: string) {
+export function parseJsonObject(object: object, title: string): any {
   let properties = {};
 
   Object.entries(object).forEach(([key, val]) => {
