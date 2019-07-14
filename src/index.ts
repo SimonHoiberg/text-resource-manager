@@ -37,6 +37,7 @@ if (args.length > 2) {
 
   const fullFilePath = getFullFilePath(args[1], filePath);
   writeInterfaceFromObject(fullFilePath);
+  console.info(`Interface has been created from file: "${fullFilePath}"`);
 
   const watch = customArgs.findIndex((a: string) => a === '-watch' || a === '--w');
 

@@ -1,4 +1,4 @@
-import { getFullFilePath } from "../src/utils";
+import { getFullFilePath } from "../utils";
 
 describe('getFullFilePath', () => {
   const modulePath = '/home/user/Documents/Projects/someProject/node_modules/text-resource-manager/dist';

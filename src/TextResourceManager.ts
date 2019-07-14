@@ -1,4 +1,4 @@
-import { TextResource } from "./../dist/texts.d";
+import { TextResource } from '../dist/texts.d';
 
 /**
  * Text Resource Manager

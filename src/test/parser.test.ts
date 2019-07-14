@@ -1,5 +1,5 @@
-import { parseJsonObject, interfaceNameConverter } from "../src/parser";
-import Constants from "../src/constants.enum";
+import { parseJsonObject, interfaceNameConverter } from "../parser";
+import Constants from "../constants.enum";
 
 describe('parseJsonObject', () => {
   const strings = require('./test.json');

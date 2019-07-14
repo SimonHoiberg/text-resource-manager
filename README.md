@@ -85,23 +85,31 @@ In your package.json, create two new `scripts`
 ```json
 ...
 "scripts": {
-   "text-lint": "node node_modules/text-resource-manager/dist/ -file <json-file-path>",
-   "text-lint:watch": "node node_modules/text-resource-manager/dist/ -file <json-file-path> -watch"
+   "trm-hint": "node node_modules/text-resource-manager/dist/ -file <json-file-path>",
+   "trm-hint:watch": "node node_modules/text-resource-manager/dist/ -file <json-file-path> -watch"
  },
 ...
 ```
+
+`trm-hint` performs a single run-through of your json file, and creates a corrosponding TypeScript interface.
+
+`trm-hint:watch` watches your json file for changes, and creates a new TypeScript interface every time a change is detected.
+
+*NB: If you are using VSCode, sometimes you will have to reload your window in order to use the updated interface.*
+
+### Use with React
 You can then use this script in extension with `npm start`  
 
 A full example of the scripts in a React App could look like this
 #### Example
 ```json
 "scripts": {
-   "start": "react-scripts start & npm run text-lint:watch",
+   "start": "react-scripts start & npm run trm-hint:watch",
    "build": "react-scripts build",
    "test": "react-scripts test",
    "eject": "react-scripts eject",
-   "text-lint": "node node_modules/text-resource-manager/dist/ -file src/strings.json",
-   "text-lint:watch": "node node_modules/text-resource-manager/dist/ -file src/strings.json -watch"
+   "trm-hint": "node node_modules/text-resource-manager/dist/ -file src/strings.json",
+   "trm-hint:watch": "node node_modules/text-resource-manager/dist/ -file src/strings.json -watch"
  },
 ```
 
